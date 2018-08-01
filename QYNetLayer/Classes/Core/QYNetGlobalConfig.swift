@@ -10,7 +10,7 @@ import UIKit
 
 class QYNetGlobalConfig: NSObject {
 
-    public static var `default` = QYNetGloabalConfig.init()
+    public static var `default` = QYNetGlobalConfig.init()
     
     /// baseUrl
     public var baseUrl:String = String.init()

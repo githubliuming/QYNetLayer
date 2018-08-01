@@ -101,5 +101,6 @@ public protocol QYPlugsProtocol {
     associatedtype outputType
 
     func setInputData(in data: inputType)
+    
     func getOutputData() throws -> outputType?
 }

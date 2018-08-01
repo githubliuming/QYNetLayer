@@ -8,8 +8,10 @@
 
 import Foundation
 
-public enum ApiError {
+public enum ApiError:Swift.Error {
     case None
+    case urlValidError(error:Swift.Error)
+    case APIRequestNilError
 }
 
 public enum QYRequestType: Int {

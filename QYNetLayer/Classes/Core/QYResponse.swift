@@ -13,5 +13,4 @@ public struct QYResponse: QYResponseProtocol {
     public var tag: Int = 0
     public var error: ApiError = ApiError.None
     public var response: Any?
-    
 }

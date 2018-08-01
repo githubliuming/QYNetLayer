@@ -23,6 +23,7 @@
 		8AEA2BF421119BCD00DFAA8F /* QYMegerRequestPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA2BF321119BCD00DFAA8F /* QYMegerRequestPlug.swift */; };
 		8AEA2BF62111A9BA00DFAA8F /* QYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA2BF52111A9BA00DFAA8F /* QYRequest.swift */; };
 		8AEA2BF82111AFFD00DFAA8F /* QYNetGlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA2BF72111AFFD00DFAA8F /* QYNetGlobalConfig.swift */; };
+		8AEA2BFA2111B51F00DFAA8F /* QYUrlValidPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA2BF92111B51F00DFAA8F /* QYUrlValidPlug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8AEA2BF321119BCD00DFAA8F /* QYMegerRequestPlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYMegerRequestPlug.swift; sourceTree = "<group>"; };
 		8AEA2BF52111A9BA00DFAA8F /* QYRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYRequest.swift; sourceTree = "<group>"; };
 		8AEA2BF72111AFFD00DFAA8F /* QYNetGlobalConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYNetGlobalConfig.swift; sourceTree = "<group>"; };
+		8AEA2BF92111B51F00DFAA8F /* QYUrlValidPlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYUrlValidPlug.swift; sourceTree = "<group>"; };
 		9DA4282A738FD51C9205A782 /* Pods-QYNetLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYNetLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-QYNetLayer/Pods-QYNetLayer.release.xcconfig"; sourceTree = "<group>"; };
 		B2AA574B761C99A1D275EF21 /* Pods-QYNetLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYNetLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QYNetLayer/Pods-QYNetLayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				8AEA2BF321119BCD00DFAA8F /* QYMegerRequestPlug.swift */,
+				8AEA2BF92111B51F00DFAA8F /* QYUrlValidPlug.swift */,
 			);
 			path = Plugs;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AEA2BCB2111598E00DFAA8F /* ViewController.swift in Sources */,
+				8AEA2BFA2111B51F00DFAA8F /* QYUrlValidPlug.swift in Sources */,
 				8AEA2BF221118D8700DFAA8F /* QYTask.swift in Sources */,
 				8AEA2BF421119BCD00DFAA8F /* QYMegerRequestPlug.swift in Sources */,
 				8AEA2BEC2111649200DFAA8F /* QYNetProtocol.swift in Sources */,
