@@ -28,61 +28,61 @@ public protocol QYRequestProtocol {
     
     /// 接口路径
     var apiPath: String? { get set }
-    
+
     ///  请求url，当url有值且全局配置的BaseUrl也有值 并且ingoreBaseUrl为NO的情况下以全局配置的url为准
     var url: String? { get set }
-    
+
     /// 接口完整路径 baseUrl + api
     var fullUrl: String? { get set }
-    
+
     /// 完整的请求Url baseUrl + api + params
     var uriPath: String? { get set }
-    
+
     /// 超时时间
     var timeOutInterval: TimeInterval { get set }
-    
+
     /// 是否忽略全局配置的 httpHeader 默认 false 不忽略
     var ingoreGloableHeaders: Bool { get set }
-    
+
     /// 本次请求是否忽略默认配置的请求参数 默认为NO 不忽略
     var ingoreGloableParams: Bool { get set }
-    
+
     /// 文件路径
     var fileUrl: String? { get set }
-    
+
     /// 参数
     var params: Dictionary<String, Any> { get set }
-    
+
     /// 自定义头部
-    var headers: Dictionary<String, Any> { get set }
-    
+    var headers: Dictionary<String, String> { get set }
+
     /// 混存策略
     var cachePolicy: URLRequest.CachePolicy { get set }
-    
+
     /// 消息ID
     var msgId: Int { get set }
-    
+
     /// 消息tag
     var tag: Int { get set }
-    
+
     /// 请求类型
     var requstType: QYRequestType { get set }
-    
+
     /// HttpMethod
     var httpMethod: QYHttpMethod { get set }
-    
+
     /// 是否支持断点续传 默认 true
     var supportBreakpoint: Bool { get set }
-    
+
     /// 重试次数 默认 3次
     var retryCount: Int { get set }
-    
+
     /// 重试间隔 0.2s
     var retryDelayTime: TimeInterval { get set }
-    
+
     /// 是否允许重复请求
     var allowRepeatRequest: Bool { get set }
-    
+
     /// 请求任务优先级
     var taskPrority: QYTaskPriority { get set }
 }
@@ -99,8 +99,7 @@ public protocol QYTaskProtocol {
 public protocol QYPlugsProtocol {
     associatedtype inputType
     associatedtype outputType
-
-    func setInputData(in data: inputType)
     
+    func setInputData(in data: inputType)
     func getOutputData() throws -> outputType?
 }

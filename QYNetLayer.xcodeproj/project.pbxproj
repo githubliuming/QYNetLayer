@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0980B4A06A38F74593F65119 /* Pods_QYNetLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ED711EE608D5FB6B2432B1 /* Pods_QYNetLayer.framework */; };
+		8A4DE1BA2112CA5A0020D0EE /* QYReustConvertPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DE1B92112CA5A0020D0EE /* QYReustConvertPlug.swift */; };
+		8A4DE54A2112E98E0020D0EE /* QYRequstBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DE5492112E98E0020D0EE /* QYRequstBuilder.swift */; };
+		8A4DE54D211309500020D0EE /* QYNetPlugsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DE54C211309500020D0EE /* QYNetPlugsManager.swift */; };
 		8AEA2BC92111598E00DFAA8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA2BC82111598E00DFAA8F /* AppDelegate.swift */; };
 		8AEA2BCB2111598E00DFAA8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA2BCA2111598E00DFAA8F /* ViewController.swift */; };
 		8AEA2BCE2111598E00DFAA8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEA2BCC2111598E00DFAA8F /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		67ED711EE608D5FB6B2432B1 /* Pods_QYNetLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYNetLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4DE1B92112CA5A0020D0EE /* QYReustConvertPlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYReustConvertPlug.swift; sourceTree = "<group>"; };
+		8A4DE5492112E98E0020D0EE /* QYRequstBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYRequstBuilder.swift; sourceTree = "<group>"; };
+		8A4DE54C211309500020D0EE /* QYNetPlugsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYNetPlugsManager.swift; sourceTree = "<group>"; };
 		8AEA2BC52111598E00DFAA8F /* QYNetLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYNetLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AEA2BC82111598E00DFAA8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AEA2BCA2111598E00DFAA8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		8AEA2BDD21115B2800DFAA8F /* Plugs */ = {
 			isa = PBXGroup;
 			children = (
+				8A4DE1B92112CA5A0020D0EE /* QYReustConvertPlug.swift */,
 				8AEA2BF321119BCD00DFAA8F /* QYMegerRequestPlug.swift */,
 				8AEA2BF92111B51F00DFAA8F /* QYUrlValidPlug.swift */,
 			);
@@ -140,6 +147,8 @@
 				8AEA2BF121118D8700DFAA8F /* QYTask.swift */,
 				8AEA2BF52111A9BA00DFAA8F /* QYRequest.swift */,
 				8AEA2BF72111AFFD00DFAA8F /* QYNetGlobalConfig.swift */,
+				8A4DE5492112E98E0020D0EE /* QYRequstBuilder.swift */,
+				8A4DE54C211309500020D0EE /* QYNetPlugsManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -282,8 +291,11 @@
 				8AEA2BF82111AFFD00DFAA8F /* QYNetGlobalConfig.swift in Sources */,
 				8AEA2BE4211162D600DFAA8F /* QYAPIManager.swift in Sources */,
 				8AEA2BEE211166D000DFAA8F /* QYError.swift in Sources */,
+				8A4DE1BA2112CA5A0020D0EE /* QYReustConvertPlug.swift in Sources */,
+				8A4DE54D211309500020D0EE /* QYNetPlugsManager.swift in Sources */,
 				8AEA2BF021118D1E00DFAA8F /* QYResponse.swift in Sources */,
 				8AEA2BC92111598E00DFAA8F /* AppDelegate.swift in Sources */,
+				8A4DE54A2112E98E0020D0EE /* QYRequstBuilder.swift in Sources */,
 				8AEA2BEA2111635000DFAA8F /* QYBridgeNet.swift in Sources */,
 				8AEA2BF62111A9BA00DFAA8F /* QYRequest.swift in Sources */,
 				8AEA2BE82111631F00DFAA8F /* QYPlugHander.swift in Sources */,

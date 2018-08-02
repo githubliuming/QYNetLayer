@@ -15,8 +15,8 @@ public class QYAPIManager: NSObject {
     public override init() {
         super.init()
     }
-
-    public func send(request _: QYRequestProtocol) -> QYTaskProtocol? {
+    @discardableResult
+    public func startRuqest(request _: QYRequestProtocol) -> QYTaskProtocol? {
     
         return nil
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class QYUrlValidPlug: NSObject, QYPlugsProtocol {
+    
     public typealias inputType = String
 
     public typealias outputType = Bool

@@ -31,7 +31,7 @@ public class QYRequest: NSObject, QYRequestProtocol {
     /// 参数
     public var params: Dictionary<String, Any> = Dictionary<String, Any>.init()
     /// 自定义头部
-    public var headers: Dictionary<String, Any> = Dictionary<String, Any>.init()
+    public var headers: Dictionary<String, String> = Dictionary<String,String>.init()
     /// 混存策略
     public var cachePolicy: URLRequest.CachePolicy = URLRequest.CachePolicy.useProtocolCachePolicy
     /// 消息ID

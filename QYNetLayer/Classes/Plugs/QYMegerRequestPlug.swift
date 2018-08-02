@@ -13,7 +13,7 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
 
     public typealias outputType = QYRequestProtocol
 
-    private var inputData: inputType?
+    public var inputData: inputType?
 
     public override init() {
         super.init()
@@ -41,13 +41,13 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
                 inputData?.params = meger(from: data.params, to: config.globalParams)
             }
             if !data.ingoreGloableHeaders {
-                inputData?.headers = meger(from: data.headers, to: config.globalHeaders)
+                inputData?.headers = meger(from: data.headers, to: config.globalHeaders) as! Dictionary<String, String>
             }
+            return inputData
 
         } catch let error {
             throw error
         }
-        return inputData
     }
 
    private func meger(from _: Dictionary<String, Any>, to dic2: Dictionary<String, Any>) -> Dictionary<String, Any> {
