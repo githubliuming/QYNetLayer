@@ -13,6 +13,11 @@ public struct QYTask: QYTaskProtocol {
 
     public var msgId: Int = 0
     public var tag: Int = 0
+    private var _identifer: Int = 0
+
+    public var identifer: Int {
+        return _identifer
+    }
 
     public func cancel() {
         urlTask.cancel()

@@ -10,14 +10,22 @@ import UIKit
 
 public class QYAPIManager: NSObject {
     private var taskArray: Array<QYTaskProtocol> = Array<QYTaskProtocol>.init()
-
+    
+    private var apiCenter:QYNetCenter = QYNetCenter.init()
     weak var delegate: QYHttpDelegate?
     public override init() {
         super.init()
+        apiCenter.delegate = self
     }
     @discardableResult
-    public func startRuqest(request _: QYRequestProtocol) -> QYTaskProtocol? {
-    
+    public func startRuqest(_ request: QYRequestProtocol) -> QYTaskProtocol? {
+        do {
+            let task:QYTask =  try apiCenter.sendRequest(request:request)
+            return task
+        } catch let error {
+            
+            self.delegate?.httpRequestFailure(error: error as! ApiError);
+        }
         return nil
     }
 
@@ -56,5 +64,16 @@ public class QYAPIManager: NSObject {
         }
         objc_sync_exit(taskArray)
         return i
+    }
+}
+extension QYAPIManager:QYNetCenterProtocol{
+    public func updateProgress(response: QYResponse) {
+        self.delegate?.httpRequestProgress(response: response)
+    }
+    public func completedHandler(respose: QYResponse) {
+        self.delegate?.httpRequestSuccess(response: respose)
+    }
+    public func errorHandler(error: ApiError) {
+      self.delegate?.httpRequestFailure(error: error)
     }
 }

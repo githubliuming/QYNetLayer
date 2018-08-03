@@ -141,6 +141,10 @@ public class QYRequestBuilder<T: QYRequestProtocol> {
         return self
     }
 
+    public func resopseSerializerType(type:QYResopseSerializerType = .json) -> QYRequestBuilder {
+        request.resposeSerializerType = type
+        return self
+    }
     public func getRequst() -> T {
         return request
     }

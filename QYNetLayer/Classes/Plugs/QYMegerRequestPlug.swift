@@ -13,7 +13,7 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
 
     public typealias outputType = QYRequestProtocol
 
-    public var inputData: inputType?
+    private var inputData: inputType?
 
     public override init() {
         super.init()
@@ -33,9 +33,12 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
         do {
             let validPlug: QYUrlValidPlug = QYUrlValidPlug()
             validPlug.setInputData(in: urlString)
-            try validPlug.getOutputData()
             
-            inputData?.url = urlString
+            let result = try validPlug.getOutputData()
+            if result == false {
+                throw ApiError.urlNilError(msgId:data.msgId)
+            }
+            inputData?.url = urlString + (data.apiPath ?? "")
             //2、合并参数和http请求头
             if !data.ingoreGloableParams {
                 inputData?.params = meger(from: data.params, to: config.globalParams)

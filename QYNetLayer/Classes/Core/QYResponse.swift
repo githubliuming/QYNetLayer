@@ -9,8 +9,16 @@
 import UIKit
 
 public struct QYResponse: QYResponseProtocol {
-    public var msgId: Int = 0
-    public var tag: Int = 0
+    public var temporaryURL: URL?
+
+    public var destinationURL: URL?
+
+    public var resumeData: Data?
+
+    public var data: Data?
+    public var progress: Progress?
+    public var reqeust: QYRequestProtocol?
     public var error: ApiError = ApiError.None
-    public var response: Any?
+    public var response: HTTPURLResponse?
+    public var responseObj: Any?
 }

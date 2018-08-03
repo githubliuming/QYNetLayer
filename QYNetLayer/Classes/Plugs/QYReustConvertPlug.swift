@@ -8,13 +8,20 @@
 
 import UIKit
 
-public class QYRequestConvertPlug: NSObject,QYPlugsProtocol {
+public class QYRequestConvertPlug: NSObject {
     
+    
+    private var inputData:QYRequestProtocol?
+    override public init() {
+        super.init()
+    }
+    
+}
+extension QYRequestConvertPlug:QYPlugsProtocol {
     
     public typealias inputType = QYRequestProtocol
     public typealias outputType = URLRequest
     
-    private var inputData:QYRequestProtocol?
     public func setInputData(in data: QYRequestProtocol) {
         self.inputData = data;
     }
@@ -29,13 +36,13 @@ public class QYRequestConvertPlug: NSObject,QYPlugsProtocol {
     }
     
     private func convertRequest() throws -> URLRequest?{
-
+        
         guard let data = inputData else {
             throw ApiError.APIRequestNilError;
         }
         let url:URL? = URL.init(string: data.url!)
         guard let u = url else {
-           throw ApiError.urlNileError(msgId: data.msgId)
+            throw ApiError.urlNilError(msgId: data.msgId)
         }
         
         var urlRquest = URLRequest.init(url: u, cachePolicy: data.cachePolicy, timeoutInterval: data.timeOutInterval);

@@ -16,16 +16,28 @@ public protocol QYHttpDelegate: NSObjectProtocol {
 }
 
 public protocol QYResponseProtocol {
-    var msgId: Int { get set }
-    var tag: Int { get set }
+    var progress: Progress? { get set }
+    var reqeust: QYRequestProtocol? { get set }
     var error: ApiError { get set }
-    var response: Any? { get set }
+    var response: HTTPURLResponse? { get set }
+    var data: Data? { get set }
+
+    /// The temporary destination URL of the data returned from the server.
+    var temporaryURL: URL? { get set }
+
+    /// The final destination URL of the data returned from the server if it was moved.
+    var destinationURL: URL? { get set }
+
+    /// The resume data generated if the request was cancelled.
+    var resumeData: Data? { get set }
+
+    var responseObj: Any? { get set }
 }
 
 public protocol QYRequestProtocol {
     init(baseUrl url: String?)
     init(apiPath path: String?)
-    
+
     /// 接口路径
     var apiPath: String? { get set }
 
@@ -85,6 +97,9 @@ public protocol QYRequestProtocol {
 
     /// 请求任务优先级
     var taskPrority: QYTaskPriority { get set }
+
+    /// 返回数据序列化成固定格式
+    var resposeSerializerType: QYResopseSerializerType { get set }
 }
 
 public protocol QYTaskProtocol {
@@ -99,7 +114,7 @@ public protocol QYTaskProtocol {
 public protocol QYPlugsProtocol {
     associatedtype inputType
     associatedtype outputType
-    
+
     func setInputData(in data: inputType)
     func getOutputData() throws -> outputType?
 }
