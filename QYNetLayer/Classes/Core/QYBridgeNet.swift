@@ -52,6 +52,7 @@ public class QYBridgeNet: NSObject {
                              progress: @escaping QYProgressHandler,
                              completed: @escaping QYCompletionHandler) throws -> QYTask {
         let requestPlug: QYRequestConvertPlug = QYRequestConvertPlug()
+      let paramEncoderPlug:QYParamEcodingPlug = QYParamEcodingPlug.init()
         requestPlug.setInputData(in: rq)
         do {
             let request: URLRequest? = try requestPlug.getOutputData()
@@ -59,7 +60,9 @@ public class QYBridgeNet: NSObject {
             guard let tmpRequest = request else {
                 throw ApiError.APIRequestNilError
             }
-            var dataTask: DataRequest = Alamofire.request(tmpRequest)
+		paramEncoderPlug.setInputData(in: (tmpRequest, rq.params, rq.requestSerializerType))
+            let encoderRuquest:URLRequest? = try paramEncoderPlug.getOutputData()
+            var dataTask: DataRequest = Alamofire.request(encoderRuquest!)
             dataTask = bind(dataTask, request: rq,
                             progressHandler: progress,
                             completed: completed)

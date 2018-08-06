@@ -54,6 +54,8 @@ public class QYRequest: NSObject, QYRequestProtocol {
     public var taskPrority: QYTaskPriority = .defualt
     /// 返回数据序列化格式
     public var resposeSerializerType: QYResopseSerializerType = .json
+    /// 参数格式化
+    public var requestSerializerType: QYRequestSerializerType = .json
     public required init(baseUrl url: String?) {
         self.url = url
         super.init()

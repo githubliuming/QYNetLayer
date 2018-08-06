@@ -18,6 +18,8 @@ public enum ApiError:Swift.Error {
     case dataDecoderError(Swift.Error)
     case DataSerialization(Swift.Error)
     case resposeEmptyData
+    case paramEncodingInputNil
+    case paramEncodingError(Swift.Error)
     
     public var localizedDescription:String? {
         switch self {
@@ -72,6 +74,13 @@ public enum QYResopseSerializerType {
     case raw     //原始数据
     case json    //序列化成json
     case plist   //序列化成plist
+}
+
+public enum QYRequestSerializerType {
+
+      case raw   // application/x-www-form-urlencoded
+      case json  // application/json
+      case plist // application/x-plist
 }
 public enum QYPlugFuncType:String{
     

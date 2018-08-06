@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0843E91D21156F7F00D244B7 /* QYParamEcodingPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0843E91C21156F7F00D244B7 /* QYParamEcodingPlug.swift */; };
 		0980B4A06A38F74593F65119 /* Pods_QYNetLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ED711EE608D5FB6B2432B1 /* Pods_QYNetLayer.framework */; };
 		8A3F7DE82113F2D700BD8570 /* QYNetCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F7DE72113F2D700BD8570 /* QYNetCenter.swift */; };
 		8A3F7DEC21144DD700BD8570 /* QYResposeSerializerPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F7DEB21144DD700BD8570 /* QYResposeSerializerPlug.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0843E91C21156F7F00D244B7 /* QYParamEcodingPlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYParamEcodingPlug.swift; sourceTree = "<group>"; };
 		67ED711EE608D5FB6B2432B1 /* Pods_QYNetLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYNetLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3F7DE72113F2D700BD8570 /* QYNetCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYNetCenter.swift; sourceTree = "<group>"; };
 		8A3F7DEB21144DD700BD8570 /* QYResposeSerializerPlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYResposeSerializerPlug.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				8AEA2BF321119BCD00DFAA8F /* QYMegerRequestPlug.swift */,
 				8AEA2BF92111B51F00DFAA8F /* QYUrlValidPlug.swift */,
 				8A3F7DEB21144DD700BD8570 /* QYResposeSerializerPlug.swift */,
+				0843E91C21156F7F00D244B7 /* QYParamEcodingPlug.swift */,
 			);
 			path = Plugs;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				8AEA2BEA2111635000DFAA8F /* QYBridgeNet.swift in Sources */,
 				8A3F7DE82113F2D700BD8570 /* QYNetCenter.swift in Sources */,
 				8AEA2BF62111A9BA00DFAA8F /* QYRequest.swift in Sources */,
+				0843E91D21156F7F00D244B7 /* QYParamEcodingPlug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

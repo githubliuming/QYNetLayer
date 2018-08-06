@@ -100,6 +100,8 @@ public protocol QYRequestProtocol {
 
     /// 返回数据序列化成固定格式
     var resposeSerializerType: QYResopseSerializerType { get set }
+    //参数序列化
+    var requestSerializerType:QYRequestSerializerType {get set}
 }
 
 public protocol QYTaskProtocol {

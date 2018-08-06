@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         //
         api.delegate = self
         let requst = HttpBuilder()
-            .url(url: "https://httpbin.org/")
-            .apiPath(path: "/post")
+            .url(url: "https://httpbin.org")
+            .apiPath(path: "/get")
             .addParam(key: "mehtod", value: "post")
             .msgId(msgId: 3)
             .getRequst()

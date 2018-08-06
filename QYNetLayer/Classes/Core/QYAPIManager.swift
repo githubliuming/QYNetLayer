@@ -23,8 +23,8 @@ public class QYAPIManager: NSObject {
             let task:QYTask =  try apiCenter.sendRequest(request:request)
             return task
         } catch let error {
-            
-            self.delegate?.httpRequestFailure(error: error as! ApiError);
+
+            self.errorHandler(error: error as! ApiError)
         }
         return nil
     }

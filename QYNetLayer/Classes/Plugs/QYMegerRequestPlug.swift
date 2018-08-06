@@ -23,7 +23,7 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
         inputData = data
     }
 
-    public func getOutputData() throws -> outputType? {
+    public func getOutputData() throws -> QYRequestProtocol? {
         guard let data = self.inputData else {
             throw ApiError.APIRequestNilError
         }
@@ -46,6 +46,9 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
             if !data.ingoreGloableHeaders {
                 inputData?.headers = meger(from: data.headers, to: config.globalHeaders) as! Dictionary<String, String>
             }
+            if data.httpMethod == .get {
+                  inputData?.requestSerializerType = .raw
+            }
             return inputData
 
         } catch let error {
@@ -53,9 +56,9 @@ public class QYMegerRequestPlug: NSObject, QYPlugsProtocol {
         }
     }
 
-   private func meger(from _: Dictionary<String, Any>, to dic2: Dictionary<String, Any>) -> Dictionary<String, Any> {
+   private func meger(from dic1: Dictionary<String, Any>, to dic2: Dictionary<String, Any>) -> Dictionary<String, Any> {
         var resultDic: Dictionary<String, Any> = dic2
-        dic2.forEach { resultDic[$0.key] = $0.value }
+        dic1.forEach { resultDic[$0.key] = $0.value }
         return resultDic
     }
 }
